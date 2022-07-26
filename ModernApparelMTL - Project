@@ -1,0 +1,33 @@
+#In this SQL code, I'm querying a database that emulates the company I started - ModernApparelMontreal. 
+Below is an realistic example of the price of our products and data to answer questions below. 
+
+/**clothing:
+Hoodies 
+crewneck
+tshirts 
+pants
+socks 
+**/
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity INTEGER);
+INSERT INTO clothing VALUES (1, "Hoodies", 40, 50);
+INSERT INTO clothing VALUES (2, "Crewneck", 25, 40);
+INSERT INTO clothing VALUES (3, "tshirts", 15, 35);
+INSERT INTO clothing VALUES (4, "pants", 35, 40);
+INSERT INTO clothing Values (5, "socks", 5, 25);
+
+
+#1. Customer are requesting price of products above 20$ in order. 
+SELECT * FROM clothing;
+SELECT * FROM clothing WHERE price > 20;
+SELECT * FROM clothing Where price > 20 ORDER BY price;
+
+#2. List all the clothing products in alphabetical order. 
+SELECT SUM(price) FROM clothing;
+SELECT MAX(price) FROM clothing;
+SELECT MIN(price) FROM clothing;
+SELECT AVG(price) FROM clothing;
+SELECT SUM(quantity) FROM clothing;
+
+#3. Total cost of products grouped by price. 
+SELECT price, SUM(quantity) FROM clothing GROUP BY price;
