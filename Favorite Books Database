@@ -1,4 +1,4 @@
-/*Create favorite books database
+/*In this SQL code, I'm querying a database that contains my favorite books to answer questions about the data. 
 
 CREATE TABLE favbooks (id INTEGER, name TEXT, rating INTEGER, price INTEGER); 
 
@@ -7,6 +7,12 @@ INSERT INTO favbooks VALUES (2, "The Alchemist", 10, 15);
 INSERT INTO favbooks VALUES (3, "The Lightning Theif", 9, 10);
 INSERT INTO favbooks VALUES (3, "Catcher in the Rye", 8, 10);
 INSERT INTO favbooks VALUES (3, "Rich Dad Poor Dad", 9, 10);
+
+
+/*List all the book titles in alphabetical order. 
+select name AS "book titles" 
+FROM "favbooks"
+ORDER BY name asc;
 
 /*display the database ordered by rating
 SELCT * FROM favbooks
