@@ -1,4 +1,4 @@
-
+/*In this SQL code, I'm querying a database that contains different music genres using AND/OR functions to answer questions about the data. 
 
 CREATE TABLE songs (
     id INTEGER PRIMARY KEY,
@@ -28,3 +28,6 @@ INSERT INTO songs (title, artist, mood, duration, released)
 SELECT title FROM songs;
 SELECT title FROM songs WHERE mood = "epic" OR released > 1990;
 SELECT title FROM songs WHERE mood = "epic" AND released > 1990 AND duration < 240;
+
+
+/*In this SQL code, I'm querying a database that contains different music genres using AND/OR functions to answer questions about the data. 
