@@ -1,0 +1,14 @@
+1. Assume you are given the tables below about Facebook pages and page likes. Write a query to return the page IDs of all the Facebook pages that don't have any likes. The output should be in ascending order.
+
+SELECT pages.page_id
+FROM pages
+LEFT JOIN page_likes AS likes
+  ON pages.page_id = likes.page_id
+WHERE likes.page_id IS NULL;
+
+2. Tesla is investigating bottlenecks in their production, and they need your help to extract the relevant data. Write a SQL query that determines which parts have begun the assembly process but are not yet finished.
+
+SELECT part
+FROM parts_assembly
+WHERE finish_date IS NULL
+GROUP BY part;
