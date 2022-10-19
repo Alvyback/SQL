@@ -76,14 +76,12 @@ ORDER BY Longest_songs  desc LIMIT 5;
 
 8.calculate the average popularity for the artists in the table. Then, for every artist with an average popularity of 90 or above, you need to show their name, their average popularity, and label them as a “Top Star”.
 
-WITH popularity_average_CTE AS (
-SELECT s.artist_name,
+WITH popularity_average_CTE AS 
+(SELECT s.artist_name,
 AVG(s.popularity) AS average_popularity
 FROM SpotifyData s 
 GROUP BY s.artist_name)
  
-SELECT artist_name,
-       average_popularity,
-       'Top Star' AS tag
+SELECT artist_name, average_popularity,'Top Star' AS tag
 FROM popularity_average_CTE
 WHERE average_popularity>=90;
