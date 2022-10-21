@@ -1,4 +1,4 @@
-# For the following queries I am working with the database "Chinook" the database for a digital media store. It includes tables for artists, albums, media tracks, invoices, and customers.
+# #In this SQL code, I'm querying the database "Chinook" which is a digital media store. It includes tables for artists, albums, media tracks, invoices, and customers.
 # After observing the dataset I came up with queries to answer questions related to the data 
 
 # What Customers (their full names, customer ID, and country) are not in the US?
